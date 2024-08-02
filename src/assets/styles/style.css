@@ -1,87 +1,145 @@
-#root{
-    width: 80%;
-    margin: 10px auto 0 ;
+#root {
+  width: 80%;
+  margin: 10px auto 0;
 }
 
-#navItems{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#navItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.brandName{
-    font-weight: 900;
-    font-size: 1.5rem;
-    margin: 0;
-    padding: 0;
+.brandName {
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 
-#navItems ul{
-    display: flex;
-    gap: 20px;
+#navItems ul {
+  display: flex;
+  gap: 20px;
 }
 
-#navItems ul li{
-    list-style: none;
+#navItems ul li {
+  list-style: none;
 }
-#navItems ul li a{
-    text-decoration: none;
-    color: black;
-    font-size: 1.2rem;
+#navItems ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
 }
+
+/* Carousel Image Section Start*/
 
 .carousel {
-    position: relative;
-    width: 100%;
-    border-radius: 10px;
-    /* max-width: 1000px;  */
-    margin: auto;
-    overflow: hidden;
-  }
-  
-  .carousel-images {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  margin: 20px auto;
+  overflow: hidden;
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.carousel-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 70vh;
+  object-fit: fill;
+  object-position: center;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+.carousel-text-overlay {
+  position: absolute;
+  bottom: 10px; /* Adjust the position as needed */
+  left: 10px; /* Adjust the position as needed */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+/* Carousel Image Section End*/
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 10px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  height: 600px;
+  border-radius: 10px;
+}
+.card:hover {
+  box-shadow: 10px 20px 30px 10px rgba(0, 0, 1, 0.2);
+}
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  margin-top: 5px;
+}
+.container {
+  padding: 2px 16px;
+  overflow: visible;
+}
+.image {
+  width: 90%;
+  margin: 0 auto;
+}
+.product-description {
+  text-align: left;
+  color: gray;
+  height: 17vh;
+  overflow: auto;
+}
+.cate-price {
+  line-height: 5px;
+}
+.product-title {
+  height: 5vh;
+}
+.orderButton {
+  width: 30%;
+  height: 5vh;
+  background-color: tomato;
+  margin-top: -10px;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+@media only screen and (min-width: 1550px) {
+  .product-description {
+    height: 10vh;
   }
-  
-  .carousel-image {
-    width: 100%;
-    height: 70vh;
-    object-fit: fill;
-    object-position: center;
-  }
-  
-  .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-  
-  .carousel-button.prev {
-    left: 10px;
-  }
-  
-  .carousel-button.next {
-    right: 10px;
-  }
-  .carousel-text-overlay {
-    position: absolute;
-    bottom: 10px; /* Adjust the position as needed */
-    left: 10px; /* Adjust the position as needed */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  
+}

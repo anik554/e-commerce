@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Navber = () => {
+const Navber:React.FC = () => {
     return (
         <nav id='navItems'>
             <header className='brandName'>
